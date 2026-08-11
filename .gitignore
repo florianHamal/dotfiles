@@ -1,0 +1,17 @@
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+auth.json
+secrets.json
+
+# Neovim generated/cache files
+nvim/.cache/
+nvim/.git/
+
+# OS/editor junk
+.DS_Store
+*.swp
+*.swo
