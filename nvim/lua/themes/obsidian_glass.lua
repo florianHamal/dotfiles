@@ -42,7 +42,7 @@ M.base_30 = {
   line = "#293241",
   statusline_bg = "#0b0e14",
   lightbg = "#151a23",
-  pmenu_bg = "#151a23",
+  pmenu_bg = "#c792ea",
   folder_bg = "#82aaff",
 
   -- Git
