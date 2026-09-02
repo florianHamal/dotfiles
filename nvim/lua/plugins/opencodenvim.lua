@@ -2,44 +2,49 @@ return {
 	{
 		"nickjvandyke/opencode.nvim",
 		version = "*",
-		dependencies = {
-			{
-				"folke/snacks.nvim",
-				optional = true,
-				opts = {
-					input = {},
-					picker = {
-						actions = {
-							opencode_send = function(...)
-								return require("opencode").snacks_picker_send(...)
-							end,
-						},
-						win = {
-							input = {
-								keys = {
-									["<a-a>"] = { "opencode_send", mode = { "n", "i" } },
-								},
-							},
-						},
-					},
-					terminal = {
-						win = {
-							keys = {
-								["<C-x>"] = { "<C-\\><C-n>", mode = "t", desc = "Exit terminal mode" },
-							},
-						},
-					},
-				},
-			},
-		},
+		config = function()
+			vim.g.opencode_opts = {}
+		end,
 		keys = {
-			{ "<C-a>", function() require("opencode").ask("@this: ") end, desc = "Ask OpenCode…" },
-			{ "<C-x>", function() require("opencode").select() end, desc = "Ask OpenCode…" },
-			{ "go", function() return require("opencode").operator("@this ") end, desc = "Append range to OpenCode", expr = true, mode = { "n", "x" } },
-			{ "goo", function() return require("opencode").operator("@this ") .. "_" end, desc = "Append line to OpenCode", expr = true },
-			{ "<S-C-u>", function() require("opencode").command("session.half.page.up") end, desc = "Scroll OpenCode up" },
-			{ "<S-C-d>", function() require("opencode").command("session.half.page.down") end, desc = "Scroll OpenCode down" },
-			{ "<C-.>", function() require("opencode").toggle() end, desc = "Toggle OpenCode window" },
+			{
+				"<C-a>",
+				function() require("opencode").ask("@", { submit = true }) end,
+				desc = "Ask OpenCode…",
+				mode = { "n", "x" },
+			},
+			{
+				"<leader>oc",
+				function() require("opencode").select() end,
+				desc = "Select OpenCode…",
+				mode = "n",
+			},
+			{
+				"<leader>os",
+				function() require("opencode.config").opts.server.start() end,
+				desc = "Start OpenCode server",
+				mode = "n",
+			},
+			{
+				"<C-.>",
+				function()
+					for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+						local name = vim.api.nvim_buf_get_name(buf)
+						if name:match("term://.*opencode") then
+							for _, win in ipairs(vim.api.nvim_list_wins()) do
+								if vim.api.nvim_win_get_buf(win) == buf then
+									vim.api.nvim_win_close(win, false)
+									return
+								end
+							end
+							vim.cmd("vsplit")
+							vim.api.nvim_win_set_buf(0, buf)
+							return
+						end
+					end
+					require("opencode").ask()
+				end,
+				desc = "Toggle OpenCode",
+			},
 		},
 	},
 }
