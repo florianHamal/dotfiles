@@ -39,6 +39,7 @@ return {
 			{ "goo", function() return require("opencode").operator("@this ") .. "_" end, desc = "Append line to OpenCode", expr = true },
 			{ "<S-C-u>", function() require("opencode").command("session.half.page.up") end, desc = "Scroll OpenCode up" },
 			{ "<S-C-d>", function() require("opencode").command("session.half.page.down") end, desc = "Scroll OpenCode down" },
+			{ "<C-.>", function() require("opencode").toggle() end, desc = "Toggle OpenCode window" },
 		},
 	},
 }

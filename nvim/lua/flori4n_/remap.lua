@@ -5,6 +5,11 @@ vim.keymap.set("n", "<leader>dga", function() vim.diagnostic.setqflist({ open = 
 vim.keymap.set({ "n", "v" }, "<leader>fm", function() vim.lsp.buf.format({ async = true }) end, { desc = "Format" })
 
 
+vim.keymap.set("i", "jk", "<Esc>")
+vim.keymap.set("v", "jk", "<Esc>")
+vim.keymap.set("c", "jk", "<Esc>")
+vim.keymap.set("t", "jk", "<C-\\><C-n>")
+
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")

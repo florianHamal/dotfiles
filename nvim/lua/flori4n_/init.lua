@@ -9,3 +9,15 @@ vim.opt.wrap = false
 --end, { desc = "Toggle relative numbers" })
 
 require("flori4n_.remap")
+vim.opt.clipboard = "unnamedplus"
+
+--require("notify").setup({
+--  background_colour = "#000000",
+--})
+
+--require('vim._core.ui2').enable()
+--
+--
+
+
+
