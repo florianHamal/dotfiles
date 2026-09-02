@@ -2,9 +2,13 @@ return {
 	{
 		"nickjvandyke/opencode.nvim",
 		version = "*",
-		config = function()
-			vim.g.opencode_opts = {}
-		end,
+config = function()
+    vim.g.opencode_opts = {
+        server = {
+            url = "http://localhost:3000", -- adjust port as needed
+        },
+    }
+end,
 		keys = {
 			{
 				"<C-a>",
