@@ -14,3 +14,12 @@ vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
+
+vim.keymap.set("n", "<leader>v", ":botright vsplit<CR>", { desc = "Vertical split" })
+vim.keymap.set("n", "<leader>h", ":botright split<CR>", { desc = "Horizontal split" })
+
+vim.keymap.set("n", "<leader>tv", ":botright vsplit | terminal<CR>", { desc = "Terminal (vertical)" })
+vim.keymap.set("n", "<leader>th", ":botright split | terminal<CR>", { desc = "Terminal (horizontal)" })
+
+vim.keymap.set("n", "<leader>bd", ":bdelete<CR>", { desc = "Delete buffer" })
+vim.keymap.set("n", "<leader>bn", ":enew<CR>", { desc = "New buffer" })
