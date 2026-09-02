@@ -1,6 +1,7 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.wrap = false
+vim.opt.splitright = true
 
 --local numtoggle = false
 --vim.keymap.set("n", "<leader>faa", function()
