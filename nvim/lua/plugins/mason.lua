@@ -3,7 +3,9 @@ return {
     opts = {
 	    ensure_installed = {
 	    "html",
-	    "lua_ls"
+	    "lua_ls",
+	    "jdtls",
+	    "kotlin-lsp",
     },
     },
     dependencies = {
