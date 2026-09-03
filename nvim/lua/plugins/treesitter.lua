@@ -4,7 +4,7 @@ return {
   		lazy = false,
 		build = ':TSUpdate',
 		config = function()
-    		  require('nvim-treesitter').install { 'rust', 'javascript', 'zig' }
+    		  require('nvim-treesitter').install { 'rust', 'javascript', 'zig', 'java' }
     		end,	
 	}
 }
