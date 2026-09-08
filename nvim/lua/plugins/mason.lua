@@ -7,6 +7,7 @@ return {
 	    "jdtls",
 	    "kotlin-lsp",
     },
+
     },
     dependencies = {
     { "mason-org/mason.nvim", opts = {} },
