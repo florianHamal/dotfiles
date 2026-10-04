@@ -24,6 +24,8 @@ vim.keymap.set("n", "<leader>th", ":botright split | terminal<CR>", { desc = "Te
 vim.keymap.set("n", "<leader>bd", ":bdelete<CR>", { desc = "Delete buffer" })
 vim.keymap.set("n", "<leader>bn", ":enew<CR>", { desc = "New buffer" })
 
+vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste without overwriting register" })
+
 
 
 local keymap = vim.keymap -- for conciseness

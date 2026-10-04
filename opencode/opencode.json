@@ -9,6 +9,55 @@
     "task": "allow",
     "lsp": "allow",
     "webfetch": "allow",
-    "websearch": "allow"
+    "websearch": "allow",
+    "bash": {
+      "*": "ask", // default: ask for any other shell command
+      "ls": "allow", // list directory contents
+      "pwd": "allow", // print working directory
+      "stat": "allow", // show file status details
+      "file": "allow", // detect file type
+      "wc": "allow", // count lines, words, bytes
+      "tree": "allow", // show directory tree
+      "find": "allow", // search for files
+      "fd": "allow", // fast file finder
+      "realpath": "allow", // resolve absolute path
+      "readlink": "allow", // resolve symlink target
+      "dirname": "allow", // strip filename, keep directory
+      "basename": "allow", // strip directory, keep filename
+      "cat": "allow", // print file contents
+      "head": "allow", // print first lines of file
+      "tail": "allow", // print last lines of file
+      "less": "allow", // paginate file output
+      "more": "allow", // paginate file output
+      "strings": "allow", // extract readable strings
+      "cut": "allow", // cut columns from text
+      "sort": "allow", // sort lines of text
+      "uniq": "allow", // filter duplicate lines
+      "column": "allow", // format text into columns
+      "diff": "allow", // compare two files
+      "cmp": "allow", // compare files byte by byte
+      "comm": "allow", // compare sorted files line by line
+      "md5sum": "allow", // compute MD5 checksum
+      "sha256sum": "allow", // compute SHA256 checksum
+      "sha1sum": "allow", // compute SHA1 checksum
+      "shasum": "allow", // compute SHA checksum
+      "echo": "allow", // print text arguments
+      "printf": "allow", // formatted print
+      "grep": "allow", // search text with regex
+      "jq": "allow", // query JSON data
+      "yq": "allow", // query YAML data
+      "sed -n": "allow", // read-only stream print with sed
+      "awk": "allow", // pattern scan and print text
+      "git status": "allow", // show git working tree state
+      "git diff": "allow", // show unstaged git changes
+      "git log": "allow", // show git commit history
+      "git show": "allow", // show git object details
+      "git branch": "allow", // list git branches
+      "git ls-files": "allow", // list tracked git files
+      "git ls-tree": "allow", // list git tree objects
+      "git cat-file": "allow", // inspect git objects
+      "git grep": "allow", // search tracked files in git
+      "git tag": "allow", // list git tags
+}
   }
 }

@@ -5,7 +5,7 @@ return {
 config = function()
     vim.g.opencode_opts = {
         server = {
-            url = "http://localhost:3000", -- adjust port as needed
+		--            url = "http://localhost:3000", -- adjust port as needed
         },
     }
 end,

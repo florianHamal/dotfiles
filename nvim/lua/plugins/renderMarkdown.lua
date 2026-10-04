@@ -8,7 +8,7 @@ return {
 		---@type render.md.UserConfig
 		opts = {},
 		keys = {
-			{ "<leader>gs", "<cmd>Git<cr>", desc = "Git status" },
+--			{ "<leader>gs", "<cmd>Git<cr>", desc = "Git status" },
 		},
 	},
 }
