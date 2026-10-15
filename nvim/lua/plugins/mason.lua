@@ -3,6 +3,7 @@ return {
     opts = {
 	    ensure_installed = {
 	    "html",
+	    "clangd",
 	    "lua_ls",
 	    "jdtls",
 	    "kotlin_lsp",
