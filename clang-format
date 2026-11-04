@@ -1,0 +1,9 @@
+# Global fallback for clang-format and clangd (used when a project has no
+# .clang-format of its own). Project-local .clang-format files take precedence.
+---
+BasedOnStyle: LLVM
+# Allman style: braces go on their own line.
+BreakBeforeBraces: Allman
+# Don't collapse short functions back onto one line (that would put the braces
+# back on the same line).
+AllowShortFunctionsOnASingleLine: None
