@@ -6,7 +6,7 @@ SETUVAR --export VISUAL:nvim
 SETUVAR __done_min_cmd_duration:10000
 SETUVAR __done_notification_urgency_level:low
 SETUVAR __fish_initialized:4300
-SETUVAR --export fish_user_paths:/home/florian/Android/Sdk/platform\x2dtools\x1e/home/florian/Android/Sdk/cmdline\x2dtools/latest/bin\x1e/home/florian/Android/Sdk/emulator
+SETUVAR --export fish_user_paths:/home/florian/\x2elocal/bin\x1e/home/florian/Android/Sdk/platform\x2dtools\x1e/home/florian/Android/Sdk/cmdline\x2dtools/latest/bin\x1e/home/florian/Android/Sdk/emulator
 SETUVAR pure_begin_prompt_with_current_directory:true
 SETUVAR pure_check_for_new_release:false
 SETUVAR pure_color_at_sign:pure_color_mute
